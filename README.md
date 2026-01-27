@@ -10,5 +10,7 @@ The simplest way to set up the environment is by using the official VS Code exte
 
 In the Visual Studio Code Terminal, run this command to see the automation test cases come up in the browsers: npx playwright test --headed
 
+https://playwright.dev/docs/getting-started-vscode
 https://code.visualstudio.com/download
+https://nodejs.org/en/download
 
