@@ -1,6 +1,6 @@
 I developed this Playwright TypeScript automation framework from the ground up. It includes an Authorization Fixture that executes multiple test cases for authenticating into the SauceDemo test environment. Additionally, the framework features a Shopping Cart Fixture to validate adding products to the cart and verifying their functionality.
 
-### H3 Header**Core Prerequisites**
+### **Core Prerequisites**
 
 Node.js: Playwright runs on Node.js, so you must have the current LTS version installed on your computer. 
 
