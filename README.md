@@ -16,7 +16,7 @@ https://code.visualstudio.com/download
 
 **3.** Navigate to the project folder where ever it was installed using this command: example: "cd C:/Playwright_Typescript_SauceDemo_Project"
 
-**4.** Install Project Dependancies using this command: "npm install" and "npx playwright install"
+**4.** Install Project Dependancies using these commands: "npm install" and "npx playwright install"
 
 ### **Run the tests**
 
