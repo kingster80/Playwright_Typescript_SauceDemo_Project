@@ -1,4 +1,4 @@
-//product.page.ts
+//products.page.ts
 import { expect, Locator, Page } from '@playwright/test';
 export class SauceDemoProductPage {
 readonly url ="https://www.saucedemo.com/";
