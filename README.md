@@ -6,7 +6,13 @@ Node.js: Playwright runs on Node.js, so you must have the current LTS version in
 
 Installation Steps and Required Components
 
-The simplest way to set up the environment is by using the official VS Code extension: Install the Playwright Test for VS Code extension: Open the Extensions view in VS Code (Ctrl+Shift+X or Cmd+Shift+X), search for "Playwright", and install the official extension from Microsoft. In the Visual Studio Code Terminal, 
+The simplest way to set up the environment is by using the official VS Code extension: Install the Playwright Test for VS Code extension: Open the Extensions view in VS Code (Ctrl+Shift+X or Cmd+Shift+X), search for "Playwright", and install the official extension from Microsoft. 
+
+In the Visual Studio Code terminal (Go to the top menu and select Terminal > New Terminal), clone the repository using this command: "git clone https://github.com/kingster80/Playwright_Typescript_SauceDemo_Project.git"
+
+Navigate to the project folder where ever it was installed using this command: example: "cd C:/Playwright_Typescript_SauceDemo_Project"
+
+Install Project Dependancies using this command: "npm install" and "npx playwright install"
 
 In the Visual Studio Code Terminal, run this command to see the automation test cases come up in the browsers: npx playwright test --headed
 
