@@ -20,7 +20,7 @@ https://code.visualstudio.com/download
 
 ### **Run the tests**
 
-Run this command to see the automation test cases come up in the browsers: npx playwright test --headed
+Run this command to see the automation test cases come up in the browsers: "npx playwright test --headed"
 
 https://playwright.dev/docs/getting-started-vscode
 
