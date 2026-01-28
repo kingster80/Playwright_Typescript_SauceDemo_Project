@@ -3,8 +3,10 @@ I developed this Playwright TypeScript automation framework from the ground up. 
 ### **Core Prerequisites**
 
 Node.js: Playwright runs on Node.js, so you must have the current LTS version installed on your computer. 
+https://nodejs.org/en/download
 
 Visual Studio Code: The code editor itself, which provides a smooth development experience.
+https://code.visualstudio.com/download
 
 ### **Installation Steps and Required Components:**
 
@@ -19,10 +21,6 @@ Install Project Dependancies using this command: "npm install" and "npx playwrig
 In the Visual Studio Code Terminal, run this command to see the automation test cases come up in the browsers: npx playwright test --headed
 
 https://playwright.dev/docs/getting-started-vscode
-
-https://code.visualstudio.com/download
-
-https://nodejs.org/en/download
 
 https://www.saucedemo.com/
 
