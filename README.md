@@ -3,9 +3,10 @@ I developed this Playwright TypeScript automation framework from the ground up. 
 Core Prerequisites
 
 Node.js: Playwright runs on Node.js, so you must have the current LTS version installed on your computer. 
+
 Visual Studio Code: The code editor itself, which provides a smooth development experience.
 
-Installation Steps and Required Components
+Installation Steps and Required Components:
 
 The simplest way to set up the environment is by using the official VS Code extension: Install the Playwright Test for VS Code extension: Open the Extensions view in VS Code (Ctrl+Shift+X or Cmd+Shift+X), search for "Playwright", and install the official extension from Microsoft. 
 
