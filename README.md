@@ -18,7 +18,9 @@ Navigate to the project folder where ever it was installed using this command: e
 
 Install Project Dependancies using this command: "npm install" and "npx playwright install"
 
-In the Visual Studio Code Terminal, run this command to see the automation test cases come up in the browsers: npx playwright test --headed
+### **Run the tests**
+
+Run this command to see the automation test cases come up in the browsers: npx playwright test --headed
 
 https://playwright.dev/docs/getting-started-vscode
 
