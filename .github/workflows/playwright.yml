@@ -7,7 +7,7 @@ on:
   schedule:
     # Run every day at 8:00 PM CST
     # The cron expression syntax is: minute hour day_of_month month day_of_week
-    - cron: '30 20 * * *'
+    - cron: '40 02 * * *'
   workflow_dispatch:
     # Allows you to run the workflow manually from the GitHub UI
 jobs:
