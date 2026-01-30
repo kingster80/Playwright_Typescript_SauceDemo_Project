@@ -10,7 +10,7 @@ on:
       - main
       - master
   schedule:
-    - cron: 50 02 * * *
+    - cron: 00 13 * * *
   workflow_dispatch: null
 jobs:
   test:
