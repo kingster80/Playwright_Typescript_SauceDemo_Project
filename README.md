@@ -1,28 +1,124 @@
-I developed this Playwright TypeScript automation framework from the ground up. It includes an Authorization Fixture that executes multiple test cases for authenticating into the SauceDemo test environment. Additionally, the framework features a Shopping Cart Fixture to validate adding products to the cart and verifying their functionality. Tests are executed via GitHub Actions within the CI/CD pipeline.
+# Playwright_Typescript_SauceDemo_Project
 
-### **Core Prerequisites**
+A TypeScript test automation framework built from the ground up using **Playwright** and **TypeScript**, featuring custom fixtures for authentication and shopping cart validation against the [Sauce Demo](https://www.saucedemo.com) test environment. Tests are executed automatically via **GitHub Actions** within a CI/CD pipeline.
 
-Node.js: Playwright runs on Node.js, so you must have the current LTS version installed on your computer. 
-https://nodejs.org/en/download
+---
 
-Visual Studio Code: The code editor itself, which provides a smooth development experience.
-https://code.visualstudio.com/download
+## 🛠 Tech Stack
 
-### **Installation Steps and Required Components:**
+| Tool | Description |
+|---|---|
+| Playwright | End-to-end testing framework |
+| TypeScript | Strongly typed JavaScript |
+| Node.js | Runtime environment |
+| GitHub Actions | CI/CD pipeline for automated test execution |
+| VS Code | Recommended code editor |
 
-**1.** The simplest way to set up the environment is by using the official VS Code extension: Install the Playwright Test for VS Code extension: Open the Extensions view in VS Code (Ctrl+Shift+X or Cmd+Shift+X), search for "Playwright", and install the official extension from Microsoft. 
+---
 
-**2.** In the Visual Studio Code terminal (Go to the top menu and select Terminal > New Terminal), clone the repository using this command: "git clone https://github.com/kingster80/Playwright_Typescript_SauceDemo_Project.git"
+## 📁 Project Structure
 
-**3.** Navigate to the project folder where ever it was installed using this command: example: "cd C:/Playwright_Typescript_SauceDemo_Project"
+```
+Playwright_Typescript_SauceDemo_Project/
+├── tests/
+│   ├── auth/
+│   │   └── authorization.fixture.ts    # Authentication test cases
+│   └── cart/
+│       └── shoppingCart.fixture.ts     # Shopping cart test cases
+├── playwright.config.ts                # Playwright configuration
+├── package.json                        # Project dependencies
+└── .github/
+    └── workflows/                      # GitHub Actions CI/CD pipeline
+```
 
-**4.** Install Project Dependancies using these commands: "npm install" and "npx playwright install"
+---
 
-### **Run the tests**
+## ⚙️ Prerequisites
 
-Run this command to see the automation test cases come up in the browsers: "npx playwright test --headed"
+- [Node.js LTS](https://nodejs.org/en/download) — Playwright requires Node.js to run
+- [Visual Studio Code](https://code.visualstudio.com/download) — Recommended code editor
+- [Playwright Test for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) — Official Microsoft extension
 
-https://playwright.dev/docs/getting-started-vscode
+---
 
-https://www.saucedemo.com/
+## 🔧 Installation
 
+**Step 1 — Install the Playwright VS Code extension:**
+```
+Open VS Code
+→ Extensions (Ctrl+Shift+X)
+→ Search "Playwright"
+→ Install "Playwright Test for VSCode" by Microsoft
+```
+
+**Step 2 — Clone the repository:**
+```bash
+git clone https://github.com/kingster80/Playwright_Typescript_SauceDemo_Project.git
+```
+
+**Step 3 — Navigate to the project folder:**
+```bash
+cd C:/Playwright_Typescript_SauceDemo_Project
+```
+
+**Step 4 — Install project dependencies:**
+```bash
+npm install
+npx playwright install
+```
+
+---
+
+## ▶️ Running the Tests
+
+Run tests in headed mode (visible browsers):
+```bash
+npx playwright test --headed
+```
+
+Run tests in headless mode:
+```bash
+npx playwright test
+```
+
+Run a specific fixture:
+```bash
+npx playwright test auth
+npx playwright test cart
+```
+
+---
+
+## 🧪 Test Cases
+
+| Fixture | Description |
+|---|---|
+| **Authorization Fixture** | Executes multiple test cases for authenticating into the SauceDemo environment |
+| **Shopping Cart Fixture** | Validates adding products to the cart and verifies their functionality |
+
+---
+
+## 🚀 CI/CD Pipeline
+
+Tests are automatically executed via **GitHub Actions** on every push and pull request. The pipeline runs the full test suite in headless mode and reports results directly in GitHub.
+
+---
+
+## 🏗 Design Patterns
+
+- **Custom Fixtures** — Authentication and shopping cart logic encapsulated in reusable Playwright fixtures
+- **TypeScript** — Strongly typed codebase for improved reliability and IDE support
+- **CI/CD Integration** — Automated test execution on every code change via GitHub Actions
+
+---
+
+## 📚 Useful Links
+
+- [Playwright Documentation](https://playwright.dev/docs/getting-started-vscode)
+- [Sauce Demo Test Environment](https://www.saucedemo.com)
+
+---
+
+## 👤 Author
+
+**kingster80** — [GitHub](https://github.com/kingster80)
