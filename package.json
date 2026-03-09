@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx bddgen && npx playwright test",
+    "test:chromium": "npx bddgen && npx playwright test --project=chromium",
+    "test:firefox": "npx bddgen && npx playwright test --project=firefox",
+    "test:webkit": "npx bddgen && npx playwright test --project=webkit"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.57.0",
-    "@types/node": "^25.0.9"
+    "@types/cucumber": "^4.0.4",
+    "@types/node": "^25.0.9",
+    "playwright-bdd": "^8.3.2"
   }
 }

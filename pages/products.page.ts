@@ -26,6 +26,7 @@ await this.page.goto(this.url);
 // Method to click on shopping cart button
   async clickShoppingCartButton() { 
     await this.shoppingCartButton.click();
+    await this.page.waitForURL('**/cart.html');
 }
 
 }

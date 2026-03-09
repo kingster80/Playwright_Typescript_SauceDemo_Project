@@ -10,7 +10,7 @@ readonly shoppingCartTitle: Locator;
 constructor(page: Page) {
 this.page = page;
 this.swaglabsLogo = page.locator('.app_logo');
-this.backpackInventoryLabel = page.getByTestId('inventory-item-name').filter({ hasText: 'Sauce Labs Backpack' })
+this.backpackInventoryLabel = page.locator('.inventory_item_name').filter({ hasText: 'Sauce Labs Backpack' });
 }
 
 async goto(){
