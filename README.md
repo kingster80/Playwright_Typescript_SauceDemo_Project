@@ -112,6 +112,77 @@ Tests are automatically executed via **GitHub Actions** on every push and pull r
 
 ---
 
+## BDD Testing with playwright-bdd
+
+This project uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to write and run BDD-style tests using Gherkin feature files alongside Playwright's test runner.
+
+### Tech Stack
+
+- **playwright-bdd** v8.4.2 — BDD layer for Playwright
+- **@cucumber/cucumber** v11.3.0 — Gherkin parser
+- **@playwright/test** v1.57.0 — Test runner
+- **TypeScript**
+
+### BDD Project Structure
+```
+tests/
+├── features/
+│   ├── login.feature            # Login scenarios (6 scenarios)
+│   └── shopping_cart.feature    # Shopping cart scenarios (1 scenario)
+├── step-definitions/
+│   └── login.steps.ts           # Step implementations for all features
+└── Data/
+    └── AuthorizationFixtureData.json  # Test data
+pages/
+├── login.page.ts                # Login page object
+├── products.page.ts             # Products page object
+└── shoppingcart.page.ts         # Shopping cart page object
+```
+
+### How It Works
+
+playwright-bdd generates Playwright spec files from `.feature` files using `bddgen`, then runs them with the standard Playwright test runner.
+
+Step definitions use `createBdd()` from `playwright-bdd` — **not** `@cucumber/cucumber` directly:
+```typescript
+import { createBdd } from 'playwright-bdd';
+const { Given, When, Then } = createBdd();
+```
+
+### Running Tests
+```bash
+# Run all tests (all browsers)
+npm test
+
+# Run on a specific browser
+npm run test:chromium
+npm run test:firefox
+npm run test:webkit
+```
+
+### Test Results
+
+**21 tests** across 3 browsers (chromium, firefox, webkit):
+
+| Feature | Scenarios | Tests |
+|---|---|---|
+| Sauce Demo Login | 6 | 18 |
+| Sauce Demo Shopping Cart | 1 | 3 |
+| **Total** | **7** | **21** |
+
+### Feature Files
+
+**login.feature** — covers:
+- Successful login with valid credentials
+- Invalid username and password
+- No credentials
+- Valid username with invalid password
+- Wrong case username
+- Wrong case password
+
+**shopping_cart.feature** — covers:
+- Add Sauce Labs Backpack to cart and verify it appears in the cart
+
 ## 📚 Useful Links
 
 - [Playwright Documentation](https://playwright.dev/docs/getting-started-vscode)
