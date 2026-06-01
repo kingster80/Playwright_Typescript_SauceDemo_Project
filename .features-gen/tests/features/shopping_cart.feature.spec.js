@@ -1,16 +1,16 @@
 // Generated from: tests\features\shopping_cart.feature
-import { test } from "playwright-bdd";
+import { test } from "../../../tests/Fixtures/pages.fixture.ts";
 
 test.describe('Sauce Demo Shopping Cart', () => {
 
-  test('Add Sauce Labs Backpack to cart', async ({ Given, When, Then, And, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with valid username and valid password', null, { page }); 
+  test('Add Sauce Labs Backpack to cart', async ({ Given, When, Then, And, cartPage, loginPage, page, productPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with valid username and valid password', null, { loginPage }); 
     await Then('I should see the products page', null, { page }); 
-    await When('I add the Sauce Labs Backpack to the cart', null, { page }); 
-    await And('I click the shopping cart button', null, { page }); 
+    await When('I add the Sauce Labs Backpack to the cart', null, { productPage }); 
+    await And('I click the shopping cart button', null, { productPage }); 
     await Then('I should see the cart page', null, { page }); 
-    await And('the Sauce Labs Backpack should be in the cart', null, { page }); 
+    await And('the Sauce Labs Backpack should be in the cart', null, { cartPage }); 
   });
 
 });

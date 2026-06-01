@@ -17,7 +17,7 @@
     "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.57.0",
     "@types/cucumber": "^4.0.4",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.9.1",
     "playwright-bdd": "^8.3.2"
   }
 }

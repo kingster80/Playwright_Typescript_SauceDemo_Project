@@ -1,42 +1,42 @@
 // Generated from: tests\features\login.feature
-import { test } from "playwright-bdd";
+import { test } from "../../../tests/Fixtures/pages.fixture.ts";
 
 test.describe('Sauce Demo Login', () => {
 
-  test('Successful login with valid credentials', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with valid username and valid password', null, { page }); 
+  test('Successful login with valid credentials', async ({ Given, When, Then, loginPage, page }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with valid username and valid password', null, { loginPage }); 
     await Then('I should see the products page', null, { page }); 
   });
 
-  test('Unsuccessful login with invalid username and invalid password', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with invalid username and invalid password', null, { page }); 
-    await Then('I should see an invalid credentials error message', null, { page }); 
+  test('Unsuccessful login with invalid username and invalid password', async ({ Given, When, Then, loginPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with invalid username and invalid password', null, { loginPage }); 
+    await Then('I should see an invalid credentials error message', null, { loginPage }); 
   });
 
-  test('Unsuccessful login with no credentials', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I click the login button with no credentials', null, { page }); 
-    await Then('I should see a no credentials error message', null, { page }); 
+  test('Unsuccessful login with no credentials', async ({ Given, When, Then, loginPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I click the login button with no credentials', null, { loginPage }); 
+    await Then('I should see a no credentials error message', null, { loginPage }); 
   });
 
-  test('Unsuccessful login with valid username and invalid password', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with valid username and invalid password', null, { page }); 
-    await Then('I should see an invalid credentials error message', null, { page }); 
+  test('Unsuccessful login with valid username and invalid password', async ({ Given, When, Then, loginPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with valid username and invalid password', null, { loginPage }); 
+    await Then('I should see an invalid credentials error message', null, { loginPage }); 
   });
 
-  test('Unsuccessful login with wrong case username', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with wrong case username and valid password', null, { page }); 
-    await Then('I should see an invalid credentials error message', null, { page }); 
+  test('Unsuccessful login with wrong case username', async ({ Given, When, Then, loginPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with wrong case username and valid password', null, { loginPage }); 
+    await Then('I should see an invalid credentials error message', null, { loginPage }); 
   });
 
-  test('Unsuccessful login with wrong case password', async ({ Given, When, Then, page }) => { 
-    await Given('I am on the Sauce Demo login page', null, { page }); 
-    await When('I login with valid username and wrong case password', null, { page }); 
-    await Then('I should see an invalid credentials error message', null, { page }); 
+  test('Unsuccessful login with wrong case password', async ({ Given, When, Then, loginPage }) => { 
+    await Given('I am on the Sauce Demo login page', null, { loginPage }); 
+    await When('I login with valid username and wrong case password', null, { loginPage }); 
+    await Then('I should see an invalid credentials error message', null, { loginPage }); 
   });
 
 });
