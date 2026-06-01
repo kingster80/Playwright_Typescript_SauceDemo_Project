@@ -15,7 +15,7 @@ this.page = page;
 this.swaglabsLogo = page.locator('.login_logo');
 this.username = page.getByPlaceholder("Username");
 this.password = page.getByPlaceholder("Password");
-this.loginbutton = page.locator('input[type="submit"]');
+this.loginbutton = page.locator('[data-test="login-button"]');
 this.errorbuttonwithcredentials = page.getByText('Epic sadface: Username and password do not match any user in this service');
 this.errorbuttonwithnocredentials = page.getByText('Epic sadface: Username is required');
 }
