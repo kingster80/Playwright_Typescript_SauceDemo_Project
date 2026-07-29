@@ -47,19 +47,3 @@ Then('I should see an invalid credentials error message', async ({ loginPage }) 
 Then('I should see a no credentials error message', async ({ loginPage }) => {
   await expect(loginPage.errorbuttonwithnocredentials).toBeVisible();
 });
-
-When('I add the Sauce Labs Backpack to the cart', async ({ productPage }) => {
-  await productPage.clickBackPackAddToCartButton();
-});
-
-When('I click the shopping cart button', async ({ productPage }) => {
-  await productPage.clickShoppingCartButton();
-});
-
-Then('I should see the cart page', async ({ page }) => {
-  await expect(page.getByText('Your Cart')).toBeVisible();
-});
-
-Then('the Sauce Labs Backpack should be in the cart', async ({ cartPage }) => {
-  await expect(cartPage.backpackInventoryLabel).toBeVisible();
-});
